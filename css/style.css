@@ -157,9 +157,7 @@ a {
   align-items: flex-end;
 
   /* BROKEN: This should not be a background image */
-  background-image: url('../images/hero.png');
-  background-size: cover;
-  background-position: center;
+overflow: hidden;
 }
 
 .hero::after {
@@ -172,11 +170,12 @@ a {
     rgba(20, 20, 18, 0.2) 60%,
     transparent 100%
   );
+  z-index: 1;
 }
 
 .hero__content {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
@@ -396,11 +395,6 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-
-  /* BROKEN: This should not be a background image */
-  background-image: url('../images/landscape-banner.png');
-  background-size: cover;
-  background-position: center;
 }
 
 .landscape-banner::before {
@@ -408,11 +402,12 @@ a {
   position: absolute;
   inset: 0;
   background: rgba(20, 20, 18, 0.65);
+  z-index: 1;
 }
 
 .landscape-banner__content {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   text-align: center;
   padding: 4rem 2rem;
   max-width: 700px;
@@ -515,4 +510,22 @@ a {
     gap: 0.5rem;
     text-align: center;
   }
+}
+
+.hero img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.landscape-banner picture img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
 }

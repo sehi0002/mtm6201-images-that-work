@@ -17,7 +17,7 @@
   <header class="site-header">
     <div class="header-inner">
       <a href="#" class="logo-link">
-        <img src="images/ridgeline-logo.svg" alt="" class="logo">
+      <img src="images/ridgeline-logo-opt.svg" alt="Ridgeline wordmark" class="logo">
       </a>
       <nav class="site-nav">
         <a href="#">Gear</a>
@@ -39,7 +39,14 @@
     with a real <img> so srcset can work.
   ============================================================ -->
   <section class="hero">
-    <!-- Task 3: Add your <img> element here, before hero__content -->
+    <img src="images/hero-1920.webp" 
+         alt="Hikers walking on a misty mountain trail" 
+         srcset="images/hero-400.webp 400w,
+                 images/hero-800.webp 800w,
+                 images/hero-1200.webp 1200w,
+                 images/hero-1920.webp 1920w"
+         sizes="100vw">
+
     <div class="hero__content">
       <p class="hero__label">Spring / Summer 2026</p>
       <h1 class="hero__title">Built for<br>the Trail</h1>
@@ -64,7 +71,7 @@
       <article class="gear-card">
         <div class="gear-card__image">
           <!-- Task 4: Update src to product-jacket.webp -->
-          <img src="images/product-jacket.png" alt="Ridgeline Apex Shell Jacket in olive green">
+          <img src="images/product-jacket.webp" alt="Ridgeline Apex Shell Jacket in olive green">
         </div>
         <div class="gear-card__body">
           <span class="gear-card__tag">Outerwear</span>
@@ -80,7 +87,7 @@
       <article class="gear-card">
         <div class="gear-card__image">
           <!-- Task 4: Update src to product-boots.webp -->
-          <img src="images/product-boots.png" alt="Ridgeline Summit Mid hiking boots in brown leather">
+          <img src="images/product-boots.webp" alt="Ridgeline Summit Mid hiking boots in brown leather">
         </div>
         <div class="gear-card__body">
           <span class="gear-card__tag">Footwear</span>
@@ -113,7 +120,7 @@
         <article class="note-card">
           <div class="note-card__image">
             <!-- Task 5: Update src to note-rideau.webp -->
-            <img src="images/note-rideau.png" alt="A hiker crossing a wooden bridge on the Rideau Trail">
+            <img src="images/note-rideau.webp" alt="A hiker crossing a wooden bridge on the Rideau Trail">
           </div>
           <div class="note-card__body">
             <div class="note-card__meta">
@@ -129,7 +136,7 @@
         <article class="note-card">
           <div class="note-card__image">
             <!-- Task 5: Update src to note-gatineau.webp -->
-            <img src="images/note-gatineau.png" alt="Snow-covered trees on a Gatineau Hills winter trail">
+            <img src="images/note-gatineau.webp" alt="Snow-covered trees on a Gatineau Hills winter trail">
           </div>
           <div class="note-card__body">
             <div class="note-card__meta">
@@ -145,7 +152,7 @@
         <article class="note-card">
           <div class="note-card__image">
             <!-- Task 5: Update src to note-supply.webp -->
-            <img src="images/note-supply.png" alt="A textile factory floor with workers at sewing machines">
+            <img src="images/note-supply.webp" alt="A textile factory floor with workers at sewing machines">
           </div>
           <div class="note-card__body">
             <div class="note-card__meta">
@@ -173,7 +180,13 @@
   ============================================================ -->
   <section class="landscape-banner">
     <!-- Task 7: Add your <picture> element here, before landscape-banner__content -->
-    <div class="landscape-banner__content">
+    <picture>
+      <source media="(max-width: 768px)" srcset="images/banner-portrait.webp">
+      <source media="(min-width: 769px)" srcset="images/banner-wide.webp">
+      <img src="images/banner-wide.webp" alt="A misty forest trail at dawn">
+    </picture>
+    
+      <div class="landscape-banner__content">
       <h2>Every trail<br>has a story.</h2>
       <p>Ridgeline gear is built for the ones worth telling.</p>
       <a href="#" class="btn btn--outline">Find Your Trail</a>
